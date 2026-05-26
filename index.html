@@ -1,26 +1,196 @@
 <!doctype html>
-<html lang="pt br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Site Curso em Video</title>
+    <title>BestAmp Sound</title>
     <link rel="stylesheet" href="estilo.css" />
   </head>
   <body>
     <main>
-      <header>
-        <h1>Curso Gratis</h1>
-        <article>
-          <h2>Curso de HTML5 com CSS3</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel commodi
-            voluptate hic velit architecto neque nemo, culpa, cum aut, deserunt
-            suscipit non similique? Sed vitae fugit labore porro voluptatem
-            eius?
-          </p>
-        </article>
-        <article></article>
+      <nav class="site-nav">
+        <div class="nav-brand">
+          <span class="logo-mark">B</span>
+          <div>
+            <strong>BestAmp</strong>
+            <small>Sound Studio</small>
+          </div>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#features">Recursos</a>
+          <a href="#pricing">Planos</a>
+          <button class="nav-cta">Comprar Premium</button>
+        </div>
+      </nav>
+
+      <header class="hero">
+        <div class="header-top">
+          <div class="hero-copy">
+            <p class="eyebrow">Áudio profissional direto do navegador</p>
+            <h1>BestAmp Sound</h1>
+            <p class="hero-text">Transforme qualquer som com equalização de 10 bandas, bass booster, microfone ao vivo e visualização em tempo real.</p>
+            <div class="hero-actions">
+              <button class="primary-button">Teste grátis</button>
+              <button class="secondary-button">Veja planos</button>
+            </div>
+            <div class="hero-badges">
+              <span>10 bandas de equalização</span>
+              <span>Streaming e mic</span>
+              <span>Visualização instantânea</span>
+            </div>
+          </div>
+          <img src="equalizer.svg" alt="Ícone de equalizador" class="app-image" />
+        </div>
       </header>
+
+      <section class="player-panel">
+        <label class="file-label" for="audio-file">Arquivo de áudio</label>
+        <input type="file" id="audio-file" accept="audio/*" />
+        <label class="url-label" for="audio-url">Carregar por URL</label>
+        <input type="url" id="audio-url" placeholder="https://example.com/audio.mp3" />
+        <div class="control-row">
+          <button type="button" id="mic-button">Usar microfone</button>
+          <button type="button" id="power-button">Desligar</button>
+        </div>
+        <p class="mic-status" id="mic-status">Microfone inativo</p>
+        <audio id="player" controls>
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+        <button id="resume-context">Ativar áudio</button>
+      </section>
+
+      <section class="visualizer-panel">
+        <h2>Visualizador de espectro</h2>
+        <canvas id="spectrum"></canvas>
+      </section>
+
+      <section class="presets-panel">
+        <h2>Presets</h2>
+        <div class="preset-buttons">
+          <button type="button" data-preset="flat">Flat</button>
+          <button type="button" data-preset="rock">Rock</button>
+          <button type="button" data-preset="pop">Pop</button>
+          <button type="button" data-preset="jazz">Jazz</button>
+          <button type="button" data-preset="bass">Bass</button>
+          <button type="button" id="bass-booster">Bass Booster</button>
+        </div>
+        <p class="bass-status" id="bass-status">Bass Booster desligado</p>
+      </section>
+
+      <section class="equalizer-panel">
+        <h2>Controles de ganho</h2>
+        <div class="slider-grid"></div>
+      </section>
+
+      <section class="notes">
+        <p>Use os controles acima para aumentar ou reduzir as frequências do áudio em até ±12 dB.</p>
+      </section>
+
+      <section class="feature-panel" id="features">
+        <h2>Recursos do BestAmp Sound</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>10 Bandas</h3>
+            <p>Controle preciso de graves, médios e agudos para ajustar seu áudio ao estilo desejado.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Bass Booster</h3>
+            <p>Ative graves profundos rapidamente com um modo especial que realça a base sonora.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Visualização em tempo real</h3>
+            <p>Acompanhe o espectro sonoro enquanto o áudio toca com um visualizador de frequência animado.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pricing-panel" id="pricing">
+        <h2>Planos que se adaptam ao seu som</h2>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <span class="plan-label">Grátis</span>
+            <strong>R$0</strong>
+            <p>Teste o equalizador com os recursos essenciais para áudio personalizável.</p>
+            <ul>
+              <li>10 bandas de equalização</li>
+              <li>Presets e Bass Booster</li>
+              <li>Visualizador em tempo real</li>
+            </ul>
+            <button class="plan-button">Começar grátis</button>
+          </article>
+          <article class="pricing-card featured">
+            <span class="plan-label">Premium</span>
+            <strong>R$29/mês</strong>
+            <p>Recursos avançados para produção, streaming e controle total do som.</p>
+            <ul>
+              <li>Todos os recursos Pro</li>
+              <li>Suporte prioritário</li>
+              <li>Atualizações exclusivas</li>
+            </ul>
+            <button class="plan-button plan-button-primary">Assinar Premium</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-panel" id="contact">
+        <h2>Fale com nossa equipe</h2>
+        <p>Quer saber mais sobre o plano premium ou receber suporte personalizado? Envie sua mensagem que retornamos o contato.</p>
+        <form class="contact-form" action="#" method="post">
+          <input type="text" name="name" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+          <textarea name="message" rows="5" placeholder="Escreva sua mensagem"></textarea>
+          <button class="primary-button" type="submit">Enviar mensagem</button>
+        </form>
+      </section>
+
+      <section class="faq-panel">
+        <h2>Perguntas frequentes</h2>
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>Preciso instalar algo?</h3>
+            <p>Não, o BestAmp Sound funciona diretamente no navegador sem instalação.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Posso usar com microfone ao vivo?</h3>
+            <p>Sim, o app permite capturar áudio do microfone em tempo real e aplicar equalização.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Tem planos para uso profissional?</h3>
+            <p>O plano Premium oferece recursos avançados, suporte prioritário e atualizações exclusivas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonial-panel">
+        <h2>O que nossos usuários dizem</h2>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p>“O BestAmp Sound é perfeito para mixagens rápidas. A equalização de 10 bandas e o visualizador ajudam a encontrar o ponto exato do som.”</p>
+            <strong>Lucas Maia</strong>
+            <span>Produtor musical</span>
+          </article>
+          <article class="testimonial-card">
+            <p>“Uso no estúdio e em transmissões ao vivo. A interface é clara, o bass booster dá aquele punch extra e tudo funciona direto no navegador.”</p>
+            <strong>Ana Paula</strong>
+            <span>Streamer & DJ</span>
+          </article>
+          <article class="testimonial-card">
+            <p>“Finalmente um app comercial com design moderno e recursos profissionais, sem precisar instalar nada. Muito fácil de usar e com ótima aparência.”</p>
+            <strong>Rafael Santos</strong>
+            <span>Engenheiro de áudio</span>
+          </article>
+        </div>
+      </section>
     </main>
+    <a href="#contact" class="fixed-cta">Fale conosco</a>
+    <footer class="site-footer">
+      <p>BestAmp Sound © 2026. Transforme seu áudio com tecnologia profissional.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
