@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6f42c1" />
+      <stop offset="100%" stop-color="#12c2e9" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="24" fill="#f4efff" />
+  <g transform="translate(22, 18)">
+    <rect x="0" y="24" width="12" height="52" rx="6" fill="#d3c8ec" />
+    <rect x="20" y="12" width="12" height="64" rx="6" fill="#d3c8ec" />
+    <rect x="40" y="0" width="12" height="76" rx="6" fill="#d3c8ec" />
+    <rect x="60" y="20" width="12" height="56" rx="6" fill="#d3c8ec" />
+    <rect x="80" y="36" width="12" height="40" rx="6" fill="#d3c8ec" />
+    <rect x="0" y="24" width="12" height="12" rx="6" fill="url(#grad)" />
+    <rect x="20" y="28" width="12" height="12" rx="6" fill="url(#grad)" />
+    <rect x="40" y="32" width="12" height="12" rx="6" fill="url(#grad)" />
+    <rect x="60" y="40" width="12" height="12" rx="6" fill="url(#grad)" />
+    <rect x="80" y="52" width="12" height="12" rx="6" fill="url(#grad)" />
+  </g>
+</svg>
